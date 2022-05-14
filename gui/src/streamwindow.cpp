@@ -16,8 +16,8 @@ StreamWindow::StreamWindow(const StreamSessionConnectInfo &connect_info, QWidget
 	connect_info(connect_info)
 {
 	setAttribute(Qt::WA_DeleteOnClose);
-	setWindowTitle(qApp->applicationName() + " | Stream");
-		
+	//setWindowTitle(qApp->applicationName() + " | Stream");
+	setWindowTitle(connect_info.host + " | Stream");	
 	session = nullptr;
 	av_widget = nullptr;
 
